@@ -73,9 +73,8 @@ def optimize2(solution):
         iter_num += 1
     print("DONE!")
     return solution, check_solution(data, solution, desired_revenue, desired_qty)
-
+    
 best_solution, results = optimize2(solution)
-
 assert check_solution(data, best_solution, desired_revenue, desired_qty)[0] == True
 
 best_prices = [price_cols[x] for x in best_solution]
